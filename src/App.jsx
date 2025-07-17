@@ -2,7 +2,7 @@ import { MapPin, Settings, BarChart3, Clock, Leaf, Zap } from "lucide-react";
 import "./App.css";
 import { useNavigate } from "react-router";
 import { app } from "./helpers/authFirebase";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 import chiamanda from "./assets/chiamanda.png";
 import chidebelu from "./assets/chidebelu.png";
@@ -20,10 +20,23 @@ const SmartWasteManagement = () => {
   const auth = getAuth(app);
   const user = auth.currentUser;
 
+  //Sign out
+  const handleSignOut = () => {
+      signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          nav("/");
+        })
+        .catch((error) => {
+          // An error happened.
+        });
+    };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-emerald-600 via-blue-600 to-purple-700 text-white overflow-hidden">
+      {/* <section className="relative bg-gradient-to-br from-emerald-600 via-blue-600 to-purple-700 text-white overflow-hidden"> */}
+      <section class="relative bg-teal-900" x-data="{ mobileNavOpen: false }"><img class="absolute top-0 left-0 w-full h-full" src="fauna-assets/headers/bg-waves.png" alt=""/>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
@@ -43,6 +56,11 @@ const SmartWasteManagement = () => {
           {!user && (
             <button className="text-black" onClick={() => nav("login")}>
               Log In
+            </button>
+          )}
+          {user &&(
+           <button onClick={handleSignOut} className="text-black py-1">
+              Sign Out
             </button>
           )}
 

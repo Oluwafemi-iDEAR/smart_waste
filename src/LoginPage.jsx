@@ -7,6 +7,15 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 
 
+
+import chiamanda from "./assets/chiamanda.png";
+import chidebelu from "./assets/chidebelu.png";
+import chris from "./assets/chris.png";
+import kambili from "./assets/kambili.png";
+import noble from "./assets/noble.png";
+import oluwafemi from "./assets/oluwafemi.png";
+import steve from "./assets/steve.png";
+
 const LoginPage = () => {
   const nav = useNavigate();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -66,9 +75,10 @@ const LoginPage = () => {
       )}
 
       {/* Login Form Section */}
-      <section className="relative pt-52 xs:pt-40 pb-16 md:pb-24 lg:pb-52 bg-gradient-to-r from-blue-600 to-purple-700 overflow-hidden">
+        {/* <section class="overflow-hidden relative pt-52 xs:pt-40 pb-16 md:pb-24 lg:pb-52 bg-orange-50" x-data="{ mobileNavOpen: false }"> */}
+      <section class="py-12 lg:py-24 relative overflow-hidden"><img class="absolute top-0 left-0 w-full h-full max-h-116 md:max-h-128" src="fauna-assets/contact/waves-bg-lime-half.png" alt=""/>
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-sm mx-auto">
+          <div className="max-w-sm mx-auto p-8 bg-white rounded-2xl shadow-md">
             <form>
               <h3 className="text-4xl text-center font-medium mb-10">Login</h3>
               <label className="block pl-4 mb-1 text-sm font-medium">
