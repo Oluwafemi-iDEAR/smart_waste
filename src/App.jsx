@@ -11,6 +11,7 @@ import kambili from "./assets/kambili.png";
 import noble from "./assets/noble.png";
 import oluwafemi from "./assets/oluwafemi.png";
 import steve from "./assets/steve.png";
+import gwaves from "./assets/gwaves.png";
 
 
 // Main Dashboard Component
@@ -33,17 +34,19 @@ const SmartWasteManagement = () => {
     };
 
   return (
+    
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
       {/* <section className="relative bg-gradient-to-br from-emerald-600 via-blue-600 to-purple-700 text-white overflow-hidden"> */}
-      <section class="relative bg-teal-900" x-data="{ mobileNavOpen: false }"><img class="absolute top-0 left-0 w-full h-full" src="fauna-assets/headers/bg-waves.png" alt=""/>
+      <section class="relative bg-teal-900" x-data="{ mobileNavOpen: false }">
+        <img src={gwaves} alt="g-waves" class="absolute top-0 left-0 w-full h-full"/>
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        {/* <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
           <div className="absolute top-32 right-20 w-24 h-24 bg-white rounded-full"></div>
           <div className="absolute bottom-20 left-32 w-20 h-20 bg-white rounded-full"></div>
           <div className="absolute bottom-32 right-10 w-28 h-28 bg-white rounded-full"></div>
-        </div>
+        </div> */}
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -53,13 +56,14 @@ const SmartWasteManagement = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+          
           {!user && (
-            <button className="text-black" onClick={() => nav("login")}>
+            <button className="text-black button-91" onClick={() => nav("login")}>
               Log In
             </button>
           )}
           {user &&(
-           <button onClick={handleSignOut} className="text-black py-1">
+           <button onClick={handleSignOut} className="text-black button-91 py-1">
               Sign Out
             </button>
           )}
@@ -81,7 +85,7 @@ const SmartWasteManagement = () => {
             </div>
 
             {/* Main Tagline */}
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 max-w-4xl mx-auto leading-tight">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 max-w-4xl mx-auto text-green-300 leading-tight">
               Revolutionizing Urban Waste Collection with
               <span className="text-yellow-300"> AI-Powered Intelligence</span>
             </h2>
@@ -143,8 +147,9 @@ const SmartWasteManagement = () => {
         </div>
       </section>
 
+
       {/* About Us / Project Description Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 px-8 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -222,7 +227,7 @@ const SmartWasteManagement = () => {
           </div>
 
           {/* Technology Stack */}
-          <div className="bg-gray-50 rounded-2xl p-8 mb-16">
+          <div className="bg-lime-50 rounded-2xl p-8 mb-16">
             <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
               Our Technology Stack
             </h3>
@@ -391,7 +396,9 @@ const SmartWasteManagement = () => {
               </div>
             </div>
           </div>
-          <section class="py-24 bg-gray-50">
+
+          
+          <section class="py-24 bg-lime-50">
               <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                   <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
                       <div class="w-full lg:w-1/2">
@@ -399,8 +406,7 @@ const SmartWasteManagement = () => {
                               class="font-manrope text-5xl text-gray-900 font-bold leading-[4rem] mb-7 text-center lg:text-left">
                               Our leading, strong & creative team</h2>
                           <p class="text-lg text-gray-500 mb-16 text-center lg:text-left">These people work on making the world a greener place.</p>
-                          <button class="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">Join
-                              our team</button>
+                          
                       </div>
                       <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
                           <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">

@@ -20,9 +20,12 @@ import RouteMap from "../components/RouteMap";
 import BinStatusCard from "../components/BinStatusCard";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router";
+import useStore from "../state";
 
 const Dashboard = () => {
   const nav = useNavigate();
+
+    const { user } = useStore();
   // Firebase and Connection State
   const [isConnected, setIsConnected] = useState(false);
   const [connectionError, setConnectionError] = useState(null);
@@ -39,7 +42,7 @@ const Dashboard = () => {
   const depotLocation = [37.765, -122.42];
 
   const auth = getAuth(app);
-  const user = auth.currentUser;
+  const userInfo = auth.currentUser;
 
   const db = getDatabase(app);
 
@@ -464,13 +467,10 @@ const Dashboard = () => {
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-purple-700 text-white shadow-lg">
       
-           
-       
-        {user && (
         <div className=" mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <p className="text-slate-500 text-white">
-              Welcome, <span className="font-bold">{user?.email}</span>
+              Welcome, <span className="font-bold">{user?.name}</span>
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl backdrop-blur">
@@ -516,7 +516,7 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
-         )}
+         
       </header>
 
       {/* Main Dashboard */}
