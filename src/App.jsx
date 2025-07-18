@@ -153,7 +153,7 @@ const SmartWasteManagement = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              About EcoRoute AI
+              About CLEARroute AI
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading the transformation of urban waste management through
@@ -167,8 +167,8 @@ const SmartWasteManagement = () => {
                 Our Mission
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                EcoRoute AI is dedicated to revolutionizing waste management
-                systems worldwide. We combine cutting-edge Internet of Things
+                CLEARroute AI is dedicated to revolutionizing waste management
+                systems in Maryland. We combine cutting-edge Internet of Things
                 (IoT) technology, artificial intelligence, and advanced
                 optimization algorithms to create smarter, more efficient, and
                 environmentally sustainable waste collection solutions.
