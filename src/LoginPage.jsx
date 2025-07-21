@@ -107,7 +107,7 @@ const LoginPage = () => {
     <section className="relative pt-52 xs:pt-40 pb-16 md:pb-24 lg:pb-52 bg-green-700 overflow-hidden">
       <img src={gwaves} alt="g-waves" class="absolute top-0 left-0 w-full h-full max-h-116 md:max-h-128"/>
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-sm mx-auto p-8 bg-green-100 rounded-2xl shadow-md">
+          <div className="max-w-sm mx-auto p-8 bg-green-50 rounded-2xl shadow-md">
             <form onSubmit={handleLogin}>
               <h3 className="text-4xl text-center font-medium mb-10">Login</h3>
 
@@ -160,7 +160,7 @@ const LoginPage = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="button-89 w-full py-3 text-dark font-medium btn btn-primary bg-green-900 hover:bg-lime-500 hover:text-teal-900 transition rounded-full"
+                className="button-33 mb-5 w-full py-3 text-dark font-medium btn btn-primary bg-green-900 hover:bg-lime-500 hover:text-teal-900 transition rounded-full"
               >
                 {loading ? "Logging in..." : "Login"}
               </button>

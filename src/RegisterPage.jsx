@@ -76,7 +76,7 @@ const RegisterPage = () => {
       <section className="relative pt-52 xs:pt-40 pb-16 md:pb-24 lg:pb-52 bg-green-900 overflow-hidden">
          <img src={gwaves} alt="g-waves" class="absolute top-0 left-0 w-full h-full max-h-116 md:max-h-128"/>
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-sm mx-auto p-8 bg-white rounded-2xl shadow-md">
+          <div className="max-w-sm mx-auto p-8 bg-green-50 rounded-2xl shadow-md">
             <form onSubmit={createAccount}>
               <h3 className="text-4xl text-center font-medium mb-10">
                 Register
@@ -94,7 +94,7 @@ const RegisterPage = () => {
                 name="name"
                 onChange={handleChange}
                 type="text"
-                className="w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
+                className="bg-white w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
               />
 
               <label className="block pl-4 mb-1 text-sm font-medium">
@@ -104,7 +104,7 @@ const RegisterPage = () => {
                 name="email"
                 onChange={handleChange}
                 type="text"
-                className="w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
+                className="bg-white w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
               />
 
               <label className="block pl-4 mb-1 text-sm font-medium">
@@ -115,7 +115,7 @@ const RegisterPage = () => {
                   name="password"
                   onChange={handleChange}
                   type={visible ? "text" : "password"}
-                  className="relative w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
+                  className="relative bg-white w-full px-4 py-3 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow rounded-full"
                 />
                 <a
                   href="#"
@@ -132,11 +132,11 @@ const RegisterPage = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex button-33 w-full py-3 px-5 items-center justify-center font-medium text-white hover:text-teal-900 border hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200"
+                className="flex pt-8 button-33 w-full py-3 px-5 items-center justify-center font-medium text-white hover:text-teal-900 border hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200"
               >
                 {loading ? "Signing up..." : "Sign up"}
               </button>
-              <p className="py-2 text-center">
+              <p className="py-2 pt-8 text-center">
                 Already have an account?{" "}
                 <span
                   className="text-blue-600 cursor-pointer"
